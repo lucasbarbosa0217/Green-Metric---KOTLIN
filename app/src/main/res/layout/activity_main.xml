@@ -4,10 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="#DDDDDD"
-    >
+    tools:context=".MainActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="105dp"
+            android:layout_height="97dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            app:srcCompat="@drawable/usericon" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notifications" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Olá, Bruna!"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Nome da Empresa"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:layout_editor_absoluteX="122dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Level 32"
+                    android:textColor="#475A45" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:text=" -"
+                    android:textColor="#9E9E9E" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 32.980 xp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | 40.000 xp"
+                    android:textColor="#9E9E9E" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="40000"
+                android:progress="32980"
+                android:progressTint="#64915E" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
@@ -59,6 +165,19 @@
 
                 </Button>
 
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="95dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="32dp"
+                    android:elevation="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button2"
+                    app:layout_constraintEnd_toEndOf="@+id/button2"
+                    app:layout_constraintStart_toStartOf="@+id/button2"
+                    app:layout_constraintTop_toTopOf="@+id/button2"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/recycling" />
+
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="0dp"
@@ -71,6 +190,19 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/button2"
                     app:layout_constraintTop_toTopOf="@+id/button2" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="95dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="32dp"
+                    android:elevation="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button3"
+                    app:layout_constraintEnd_toEndOf="@+id/button3"
+                    app:layout_constraintStart_toStartOf="@+id/button3"
+                    app:layout_constraintTop_toTopOf="@+id/button3"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/energy" />
 
                 <Button
                     android:id="@+id/button4"
@@ -86,32 +218,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/button5" />
 
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="7dp"
-                    android:backgroundTint="#8fbb8a"
-                    android:paddingTop="64dp"
-                    android:paddingBottom="16dp"
-                    android:text="Saúde"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button4"
-                    app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="95dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="32dp"
-                    android:elevation="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/button3"
-                    app:layout_constraintEnd_toEndOf="@+id/button3"
-                    app:layout_constraintStart_toStartOf="@+id/button3"
-                    app:layout_constraintTop_toTopOf="@+id/button3"
-                    app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/energy" />
-
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="76dp"
@@ -125,91 +231,18 @@
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/people" />
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="95dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="32dp"
-                    android:elevation="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/button2"
-                    app:layout_constraintEnd_toEndOf="@+id/button2"
-                    app:layout_constraintStart_toStartOf="@+id/button2"
-                    app:layout_constraintTop_toTopOf="@+id/button2"
-                    app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/recycling" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="16dp">
-
-                        <TextView
-                            android:id="@+id/titlepapel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_bold"
-                            android:text="Só papel reciclado"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/text4"
-                            android:layout_width="296dp"
-                            android:layout_height="73dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="Apenas papel reciclado deve ser utilizado no escritório durante 18 dia. Confirme a terefa diariamente para recolher seus pontos."
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/titlepapel" />
-
-                        <TextView
-                            android:id="@+id/numero"
-                            android:layout_width="33dp"
-                            android:layout_height="35dp"
-                            android:layout_marginEnd="2dp"
-                            android:fontFamily="@font/poppins_extralight"
-                            android:includeFontPadding="true"
-                            android:text="6"
-                            android:textAlignment="textEnd"
-                            android:textSize="34sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/numero2"
-                            app:layout_constraintStart_toEndOf="@+id/text4"
-                            app:layout_constraintTop_toBottomOf="@+id/checkBox2"
-                            app:layout_constraintVertical_bias="1.0" />
-
-                        <TextView
-                            android:id="@+id/numero2"
-                            android:layout_width="21dp"
-                            android:layout_height="17dp"
-                            android:fontFamily="@font/poppins"
-                            android:text="/18"
-                            app:layout_constraintBottom_toBottomOf="@+id/numero"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                        <CheckBox
-                            android:id="@+id/checkBox2"
-                            android:layout_width="25dp"
-                            android:layout_height="20dp"
-                            android:includeFontPadding="false"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="1.0"
-                            app:layout_constraintStart_toEndOf="@+id/titlepapel"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
+                    android:layout_marginLeft="7dp"
+                    android:backgroundTint="#8fbb8a"
+                    android:paddingTop="64dp"
+                    android:paddingBottom="16dp"
+                    android:text="Saúde"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button4"
+                    app:layout_constraintTop_toBottomOf="@+id/button2" />
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -274,6 +307,16 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
+                        <CheckBox
+                            android:id="@+id/checkBox"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:includeFontPadding="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toEndOf="@+id/textView9"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/textView6"
                             android:layout_width="33dp"
@@ -297,18 +340,81 @@
                             app:layout_constraintBottom_toBottomOf="@+id/textView6"
                             app:layout_constraintEnd_toEndOf="parent" />
 
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/titlepapel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Só papel reciclado"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="296dp"
+                            android:layout_height="73dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Apenas papel reciclado deve ser utilizado no escritório durante 18 dia. Confirme a terefa diariamente para recolher seus pontos."
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/titlepapel" />
+
                         <CheckBox
-                            android:id="@+id/checkBox"
+                            android:id="@+id/checkBox2"
                             android:layout_width="25dp"
                             android:layout_height="20dp"
                             android:includeFontPadding="false"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="1.0"
-                            app:layout_constraintStart_toEndOf="@+id/textView9"
+                            app:layout_constraintStart_toEndOf="@+id/titlepapel"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:id="@+id/numero"
+                            android:layout_width="33dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="2dp"
+                            android:fontFamily="@font/poppins_extralight"
+                            android:includeFontPadding="true"
+                            android:text="6"
+                            android:textAlignment="textEnd"
+                            android:textSize="34sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/numero2"
+                            app:layout_constraintStart_toEndOf="@+id/text4"
+                            app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+                            app:layout_constraintVertical_bias="1.0" />
 
+                        <TextView
+                            android:id="@+id/numero2"
+                            android:layout_width="21dp"
+                            android:layout_height="17dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="/18"
+                            app:layout_constraintBottom_toBottomOf="@+id/numero"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -345,6 +451,16 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tielbike" />
 
+                        <CheckBox
+                            android:id="@+id/checkBox3"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:includeFontPadding="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toEndOf="@+id/tielbike"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/numero0"
                             android:layout_width="33dp"
@@ -368,16 +484,6 @@
                             app:layout_constraintBottom_toBottomOf="@+id/numero0"
                             app:layout_constraintEnd_toEndOf="parent" />
 
-                        <CheckBox
-                            android:id="@+id/checkBox3"
-                            android:layout_width="25dp"
-                            android:layout_height="20dp"
-                            android:includeFontPadding="false"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="1.0"
-                            app:layout_constraintStart_toEndOf="@+id/tielbike"
-                            app:layout_constraintTop_toTopOf="parent" />
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -386,56 +492,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
     </com.google.android.material.card.MaterialCardView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="105dp"
-            android:layout_height="97dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            app:srcCompat="@drawable/usericon" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="41dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/notifications" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Olá, Bruna!"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="Nome da Empresa"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
