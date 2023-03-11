@@ -22,18 +22,29 @@
             android:layout_height="97dp"
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/loginIcon"
             app:srcCompat="@drawable/usericon" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/loginIcon"
             android:layout_width="41dp"
             android:layout_height="38dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/loginText"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/notifications" />
+            app:srcCompat="@drawable/login_icon" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="@+id/loginIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/loginIcon" />
 
         <TextView
             android:id="@+id/textView3"
@@ -119,13 +130,13 @@
         android:id="@+id/materialCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
         android:backgroundTint="#EFEFEF"
         app:cardElevation="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0"
         app:shapeAppearance="@style/ShapeAppearance_custom_corners">
 
         <ScrollView
