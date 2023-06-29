@@ -59,12 +59,13 @@
 
     <TextView
         android:id="@+id/labelLogin"
-        android:layout_width="108dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="@string/username_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Digite seu nome de Usuário"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/app_title" />
 
     <EditText
@@ -81,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/senha_label"
+        android:text="Digite a senha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -102,7 +103,7 @@
         android:layout_marginHorizontal="70dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#475A45"
-        android:text="@string/btn_login"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
